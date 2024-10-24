@@ -1,0 +1,112 @@
+.header {
+    padding: 65px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: center;
+    position:relative;
+    top:-50px;
+    background-color: lightblue;
+    animation: colorChange 5s infinite alternate; 
+}
+
+@keyframes colorChange {
+    0% { background-color: lightgoldenrodyellow }
+    50% { background-color: lightpink }
+    100% { background-color: lightblue; }
+}
+
+.navbar {
+    padding: 10px;
+    position: relative;
+    top: -100px;
+    background-color: black;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.right {
+    float: right; 
+    position: relative;
+    left: 10px;
+    margin: 0 10px;
+}
+
+button {
+    background-color: #189ba7; 
+    color: white; 
+    padding: 10px 25px; 
+    border: none;
+    border-radius: 5px;
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    background-color: lightgray; 
+}
+
+.footer {
+    padding: 1px;
+    text-align: center;
+    background: #000000;
+    color: white;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    bottom:-35px;
+}
+
+body{
+    background-color: lightgray;
+}
+
+.main{
+    display: flex;
+    align-items: flex-start; 
+    margin: 20px;
+    background-color: rgb(187, 176, 176);
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: relative;
+    top:-35px;
+}
+
+.text-content {
+    flex: 1;
+    margin-right: 20px; 
+    position: relative;
+    top: -5px;
+}
+
+.text-content img {
+    width: 100%; 
+    height: auto; 
+}
+
+.drones-image {
+    width: 70%; 
+    max-width: 550px; 
+    height: auto; 
+    border-radius: 10px; 
+    position: relative;
+    bottom: -40px;
+}
+
+.buttons2 {
+    display: flex; 
+    justify-content: center;
+    margin-top: 20px; 
+}
+
+.buttons2 button {
+    margin: 0 5px;
+    padding: 15px 30px; 
+    font-size: 18px; 
+    margin: 0 5px;
+}
+
+.buttons2 button:hover {
+    background-color: lightgray; 
+}

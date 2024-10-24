@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Honda Aviator UserProducts</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="CUStyleSheet.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Honda Aviator</h1>
+    </div>
+    
+    <div class="navbar">
+        <div class="buttons">
+            <button onclick="Home()">Home</button>
+            <button onclick="ContactUs()" class="right">Contact Us</button>
+            <button onclick="FAQ()" class="right">FAQs</button>
+            <button onclick="Order()" class="right">Order Now</button>
+            <button onclick="Products()" class="right">Our Products</button>
+            <button onclick="Track()" class="right">Track</button>
+            <script>
+                function Home() {
+                    window.location.href = 'Homepage.html';
+                }
+                function ContactUs() {
+                    window.location.href = 'ContactUs.html';
+                }
+                function FAQ() {
+                    window.location.href = 'FAQ.html';
+                }
+                function Order() {
+                    window.location.href = 'UserOrders.html';
+                }
+                function Products() {
+                    window.location.href = 'UserProducts.html';
+                }
+                function Track() {
+                    window.location.href = 'UserRouteMap.html';
+                }
+            </script>
+        </div>
+    </div>
+    
+    <div class="main">
+        <div class="text-content">
+            <h2>User Products</h2>
+            <table id="productTable">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Weightage</th>
+                        <th>Price</th>
+                        <th>Like the Product?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <h2>A Greener and Faster Method!</h2>
+    </div>
+    
+    <script>
+        async function loadCSV() {
+            const response = await fetch('Honda_Aviator_Products.csv'); 
+            const data = await response.text();
+            const rows = data.split('\n').slice(1); 
+            const tableBody = document.querySelector('#productTable tbody');
+    
+            rows.forEach(row => {
+                const cols = row.split(',');
+                if (cols.length >= 4) {
+                    const tr = document.createElement('tr');
+                    for (let i = 0; i < 4; i++) { 
+                        const td = document.createElement('td');
+                        td.textContent = cols[i].trim();
+                        tr.appendChild(td);
+                    }
+
+                    const buttonTd = document.createElement('td');
+                    const button = document.createElement('button');
+                    button.textContent = 'Add to Cart';
+                    button.onclick = function() {
+                        alert(`${cols[1].trim()} has been added to your cart!`); 
+                    };
+                    buttonTd.appendChild(button);
+                    tr.appendChild(buttonTd);
+                    
+                    tableBody.appendChild(tr);
+                }
+            });
+    
+            document.getElementById('productTable').style.display = 'table';
+        }
+    
+        window.onload = loadCSV;
+    </script>
+    
+</body>
+</html>

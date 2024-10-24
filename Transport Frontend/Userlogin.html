@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Log In</title>
+        <link rel="stylesheet" type="text/css" href="AcctStyleSheet.css">
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Honda Aviator</h1>
+        </div>
+        
+        <div class="navbar">
+            <div class = "buttons">
+            <button onclick = "Home()">Home</button>
+            <button onclick = "ContactUs()" class = "right">Contact Us</button>
+            <button onclick = "FAQ()" class = "right">FAQs</button>
+            <script>
+                function Home() {
+                    window.location.href = 'Homepage.html';
+                }
+                function ContactUs() {
+                    window.location.href = 'ContactUs.html';
+                }
+                function FAQ() {
+                    window.location.href = 'FAQ.html';
+                }
+            </script>
+            </div>
+        </div>
+
+        <div class ="login">
+            <h1>User Log In</h1>
+            <br>
+            <form>
+                <label for="SI_email">Email:</label>
+                <input type="email" id="email" name="email"><br>
+                <br>
+                <label for="SI_pwd">Password: </label>
+                <input type="password" id="SI_pwd" name="password"><br>
+                <br>
+                <button type="button" onclick = "Submit()" class = "rights">Submit</button>
+            </form>
+            <script>
+                function Submit()
+                    {
+                        window.location.href = 'UserProducts.html';
+                    }
+                </script>
+        </div>
+        <div class="create">
+            <br>
+            <label for="SI_CA">Don't have an Account?</label>
+            <button type="button" onclick = "CreateAcct()" class = "rights">Create An Account</button>
+        </div>
+        <script>
+        function CreateAcct()
+            {
+                window.location.href = 'CreateAccount.html';
+            }
+        </script>
+        <div class="footer">
+            <h2>A Greener and Faster Method!</h2>
+        </div>
+    </body>
+</html>

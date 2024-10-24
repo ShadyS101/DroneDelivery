@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <title>Honda Aviator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="HPStyleSheet.css">
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Honda Aviator</h1>
+</div>
+
+<div class="navbar">
+    <div class = "buttons">
+    <button onclick = "Home()">Home</button>
+    <button onclick = "ContactUs()" class = "right">Contact Us</button>
+    <button onclick = "FAQ()" class = "right">FAQs</button>
+    <script>
+        function Home() {
+            window.location.href = 'Homepage.html';
+        }
+        function ContactUs() {
+            window.location.href = 'ContactUs.html';
+        }
+        function FAQ() {
+            window.location.href = 'FAQ.html';
+        }
+    </script>
+    </div>
+</div>
+
+<div class="main">
+    <div class = "text-content">
+    <h2><u>Mission Statement</u></h2>
+    <p>Our mission statement is to provide an easier and efficient way to 
+        deliver products to your own front door using green energy. We 
+        believe that society should be doing more to combat climate change
+        through simple tasks, and making an easier way to deliver goods
+        will be a win-win to everyone.</p>
+    <h2><u>About Us</u></h2>
+    <p>Honda Aviator is a website that provide a greener and efficient
+        way for people to get their ordered products. This is done through
+        the use of drones, which deliver your products to your desired
+        destination. There are multiple drones that can carry different 
+        weights depending on the total weight of your order. <br><br>
+        <b>Drone Delivery:</b> In order to get your products, all you
+        need to do is to add the product to the cart, enter your 
+        destination, and your delivery will be on the way! You can track 
+        where your order is through our route mapping. We also have a page
+        for you to sift through various products you are interested in 
+        buying.<br><br>
+        <b>Next Steps:</b> If you are a user, please click the user button 
+        below to get started. If you are business, please click on the business 
+        button below to get started.</p>
+    </div>    
+    <img src="Drones.jpg" alt="Produce with vegetables" class="drones-image">
+</div>
+
+<div class = "buttons2">
+    <button onclick = "User()">User</button>
+    <button onclick = "Business()" class = "right">Business</button>
+    <script>
+        function User() {
+            window.location.href = 'Userlogin.html';
+        }
+        function Business() {
+            window.location.href = 'Businesslogin.html';
+        }
+    </script>
+</div>
+
+<div class="footer">
+    <h2>A Greener and Faster Method!</h2>
+</div>
+
+</body>
+</html>

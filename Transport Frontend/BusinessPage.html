@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Honda Aviator Business Product Input</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="BPStyleSheet.css">
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Honda Aviator</h1>
+</div>
+
+<div class="navbar">
+    <div class="buttons">
+        <button onclick="Home()">Home</button>
+        <button onclick="ContactUs()" class="right">Contact Us</button>
+        <button onclick="FAQ()" class="right">FAQs</button>
+        <script>
+            function Home() {
+                window.location.href = 'Homepage.html';
+            }
+            function ContactUs() {
+                window.location.href = 'ContactUs.html';
+            }
+            function FAQ() {
+                window.location.href = 'FAQ.html';
+            }
+        </script>
+    </div>
+</div>
+
+<div class="main">
+    <h2>Add a New Product</h2>
+    <form id="productForm">
+        <label for="name">Product Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br><br>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" step="0.01" required><br><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required><br><br>
+
+        <label for="quantity">Type of Product:</label>
+        <select name="accType2" id="accType2">
+            <option value="clothing">Clothing</option>
+            <option value="makeup">Makeup</option>
+            <option value="groceries">Groceries</option>
+        </select>
+        <br><br><br>
+        <label for="quantity">Weight:</label>
+        <select name="accType3" id="accType3">
+            <option value="light">Light(0g-500g)</option>
+            <option value="medium">Medium(500g-1kg)</option>
+            <option value="overweight">Overweight(>5kg)</option>
+        </select>
+        <br><br><br>
+
+        <button type="submit">Submit Product</button>
+    </form>
+</div>
+
+<script>
+document.getElementById('productForm').onsubmit = function(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(this);
+
+    console.log('Product data:', Object.fromEntries(formData.entries()));
+
+    alert('Product submitted successfully!');
+
+
+    this.reset();
+}
+</script>
+
+<div class="footer">
+    <h2>A Greener and Faster Method!</h2>
+</div>
+
+</body>
+</html>

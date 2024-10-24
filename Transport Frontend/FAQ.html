@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Honda Aviator FAQ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="FAQStyleSheet.css">
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Honda Aviator</h1>
+</div>
+
+<div class="navbar">
+    <div class = "buttons">
+    <button onclick = "Home()">Home</button>
+    <button onclick = "ContactUs()" class = "right">Contact Us</button>
+    <button onclick = "FAQ()" class = "right">FAQs</button>
+    <script>
+        function Home() {
+            window.location.href = 'Homepage.html';
+        }
+        function ContactUs() {
+            window.location.href = 'ContactUs.html';
+        }
+        function FAQ() {
+            window.location.href = 'FAQ.html';
+        }
+    </script>
+    </div>
+</div>
+    
+<div class="main">
+    <div class="text-content">
+        <h2><u>FAQs</u></h2>
+        
+        <div class="faq" onclick="toggleAnswer('answer1')">
+            <b>What is Honda Aviator?</b>
+            <div id="answer1" class="faq-answer">
+                Honda Aviator is a website that provide a greener and efficient way for people to get their ordered products.
+            </div>
+        </div>
+
+        <div class="faq" onclick="toggleAnswer('answer2')">
+            <b>How do I use Honda Aviator?</b>
+            <div id="answer2" class="faq-answer">
+                To use Honda Aviator, you will need to put in your destination after selecting a product into your cart, and through Honda Aviator, a drone will deliver that product. More information is available on the Homepage page.
+            </div>
+        </div>
+
+        <div class="faq" onclick="toggleAnswer('answer3')">
+            <b>Who should use Honda Aviator?</b>
+            <div id="answer3" class="faq-answer">
+                Anyone! This website was specifically designed for anyone to use as efficient and greener delivery should be a priority.
+            </div>
+        </div>
+
+        <div class="faq" onclick="toggleAnswer('answer4')">
+            <b>How do I contact Honda Aviator?</b>
+            <div id="answer4" class="faq-answer">
+                You can contact us through email or phone. More information is on the Contact Us page.
+            </div>
+        </div>
+
+        <div class="faq" onclick="toggleAnswer('answer5')">
+            <b>What if my package/delivery never arrived?</b>
+            <div id="answer5" class="faq-answer">
+                If you do not get your packcage, please contact us as soon as possible to get this issue sorted. Our contact information in on the Contact Us page.
+            </div>
+        </div>
+
+        <div class="faq" onclick="toggleAnswer('answer6')">
+            <b>How do businesses add in their products?</b>
+            <div id="answer6" class="faq-answer">
+                Businesses have a database page where they can upload their products by answering a few questions, and this would allow the user to view these products.
+            </div>
+        </div>
+    </div>
+</div>
+    
+<div class="footer">
+    <h2>A Greener and Faster Method!</h2>
+</div>
+    
+<script>
+    function toggleAnswer(answerId) {
+        const answerElement = document.getElementById(answerId);
+        answerElement.style.display = answerElement.style.display === 'none' || answerElement.style.display === '' ? 'block' : 'none';
+    }
+</script>
+    
+</body>
+</html>
